@@ -6,15 +6,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600" rel="stylesheet" type="text/css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
     <div class="body-background">
-      <header>
-        <h2>NUST Summer School</h2>
-        <i class="fa fa-bars" aria-hidden="false"></i>
-      </header>
-
 
       <div class="testbox">
         <h1>Registration</h1>
@@ -45,6 +40,11 @@
          <a href="#" class="button">Register</a>
         </form>
       </div>
+      <div id="NSS_logo">
+        <img src="../images/NSS_logo.png" />
+        <h2>NUST Summer School</h2>
+      </div>
+
     </div>
   </body>
 
@@ -52,7 +52,7 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
     $( function() {
-      $( ".datepicker" ).datepicker();
+      $( "#date_of_birth" ).datepicker();
     } );
 
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
