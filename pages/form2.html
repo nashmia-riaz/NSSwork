@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NSS | Details</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600" rel="stylesheet" type="text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+  </head>
+  <body>
+    <div class="body-background-2" id="main">
+      <header>
+        <img src="../images/NSS_logo.png" />
+        <h2 class="visible-lg visible-md">NUST Summer School</h2>
+
+        <div id="header_buttons">
+          <!-- Use any element to open the sidenav -->
+          <ul class="profile-wrapper">
+      			<li>
+      				<!-- user profile -->
+      				<div class="profile">
+        					<img src="https://secure.gravatar.com/avatar/2f05a5d3273d54e90f1ad6dca5eb97bc?s=47" />
+        					<a href="#" class="name">Name here</a>
+
+      					<!-- more menu -->
+      					<ul class="menu">
+      						<li><a href="#">Edit</a></li>
+      						<li><a href="#">Change Password</a></li>
+      						<li><a href="#">Log out</a></li>
+      					</ul>
+      				</div>
+      			</li>
+      		</ul>
+
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <!-- toggle sidebar -->
+        <div id="mySidenav" class="sidenav">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+
+
+        <!-- toggle sidebar -->
+      </header>
+
+    <div class="testbox" id="details">
+      <h1>Personal Details</h1>
+      <hr>
+      <div id="to_replace">
+        <form action="/">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6 col-md-6">
+                <div class="form_input">
+                  <label class="icon" for="first_name"><i class="icon-user"></i></label>
+                  <input type="text" name="first_name" id="first_name" placeholder="First Name" required/>
+                </div>
+                <div class="form_input">
+                  <label class="icon" for="middle_name"><i class="icon-user"></i></label>
+                  <input type="text" name="middle_name" id="middle_name" placeholder="Middle Name"/>
+                </div>
+                <div class="form_input">
+                  <label class="icon" for="last_name"><i class="icon-user"></i></label>
+                  <input type="text" name="last_name" id="last_name" placeholder="Last Name" required/>
+                </div>
+                <div class="form_input">
+                  <label class="icon" for="date_of_birth"><i class="icon-calendar"></i></label>
+                  <input type="text" name="date_of_birth" id="date_of_birth" placeholder="Date of Birth" required/>
+                </div>
+
+                <div class="gender">
+                  <input type="radio" value="None" id="male" name="gender" checked/>
+                  <label for="male" class="radio" chec>Male</label>
+                  <input type="radio" value="None" id="female" name="gender" />
+                  <label for="female" class="radio">Female</label>
+                 </div>
+
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="submit_photo">
+                   <h2>Upload Picture</h2>
+                   <span>The photograph must be clear, front view with plain background.
+                   Only your face and shoulders must be visible in the photograph.
+                   The face of female applicants must not be covered.</span>
+                   <input type="file" name="photo" id="photo" accept="image/*">
+                </div>
+              </div>
+            </div>
+          </div>
+        <hr>
+
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+               <div class="buttons">
+                 <a href="#" class="button" id="save">Save <i class="icon-save"></i></a>
+                 <a href="#" class="button" id="next">Next <i class="icon-caret-right"></i></a>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        </form>
+      </div>
+
+    </div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-1.12.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $(function(){
+      var isNavbarOpen = false;
+      $('#nav-icon1').click(function(){
+    		$(this).toggleClass('open');
+
+        if(!isNavbarOpen){
+          openNav();
+          isNavbarOpen = true;
+        }
+        else{
+          closeNav();
+          isNavbarOpen = false;
+        }
+    	});
+  });
+
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        // document.getElementById("main").style.marginRight = "250px";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0px";
+        // document.getElementById("main").style.marginRight = "0";
+    }
+  </script>
+</html>
